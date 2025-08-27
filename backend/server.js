@@ -3,7 +3,6 @@ const cors = require('cors');
 
 const app = express(); //Cria o servidor
 
-const port = 3000; //Variavel para armazenar a porta
 
 //Para permitir receber json nas requisições
 app.use(express.json());
@@ -82,6 +81,6 @@ app.delete("/usuarios/:id", (req, res) => {
     }
 })
 
-app.listen(port, () => {
-    console.log("Servidor rodando em http://localhost:3000");
+app.listen(8000, () => {
+    console.log("Servidor rodando em http://localhost:8000");
 })

@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/usuarios").then(res=>{
+fetch("http://localhost:8000/usuarios").then(res=>{
     if(!res.ok){
         throw new Error("Erro ao buscar usuário");
     }
@@ -8,11 +8,7 @@ fetch("http://localhost:3000/usuarios").then(res=>{
     const listaUsuarios = document.getElementById("lista-usuarios");
     usuarios.forEach(usuario => {
         listaUsuarios.innerHTML += 
-        `<li class="list-group-item">${usuario.id}</li>
-        <li class="list-group-item">${usuario.nome}</li>
-        <li class="list-group-item">${usuario.idade}</li>
-        <li class="list-group-item">${usuario.senha}</li>`
-        
+        `<li class="list-group-item">${usuario.nome}</li>`
     });
 })
 .catch(err=>{
