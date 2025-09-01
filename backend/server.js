@@ -8,11 +8,13 @@ const app = express(); //Cria o servidor
 app.use(express.json());
 app.use(cors());
 
+
 const usuarios = [
     { "id": 1, "nome": "Otavio", "idade": 20, "senha": "123" },
     { "id": 2, "nome": "Admin", "idade": 20, "senha": "1234" }
 ]
 
+let nextId = 3;
 //request - requisição
 //response - respota
 app.get("/", (request, response) => {
@@ -43,7 +45,7 @@ app.get("/usuarios/:id", (req, res) => {
 app.post("/usuarios", (req, res) => {
     //body - corpo da requisição
     const novoUsuario = req.body;
-    novoUsuario.id = usuarios.length + 1;
+    novoUsuario.id = nextId++;
     usuarios.push(novoUsuario);
 
     res.status(201).send(novoUsuario)
@@ -58,7 +60,7 @@ app.put("/usuarios/:id", (req, res) => {
 
     if (index != null) {
         usuarios[index] = novoUsuario;
-        res.status(204).send(novoUsuario);
+        res.status(200).send(novoUsuario);
     } else {
         res.status(404).send("Usuário não encontrado!")
     }

@@ -12,23 +12,23 @@
 
 <body>
     <div>
-        <h1>Cadastrar Usuario</h1>
-        <form class="container" onsubmit="cadastroUsuario(event)">
+        <h1>Atualizar Usuario</h1>
+        <form class="container" onsubmit="atualizarUsuario(event)">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome do Usuário</label>
-                <input type="text" class="form-control" id="nome" required>
+                <input type="text" class="form-control" id="nome">
             </div>
             <div class="mb-3">
                 <label for="idade" class="form-label">Idade do Usuário</label>
-                <input type="number" class="form-control" id="idade" min="0" max="100" required>
+                <input type="number" class="form-control" id="idade" min="0" max="100">
             </div>
             <div class="mb-3">
                 <label for="senha" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="senha" required>
+                <input type="password" class="form-control" id="senha">
             </div>
             <div class="botoes">
                 <a href="../index.html" class="btn btn-outline-danger">Voltar</a>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">Atualizar</button>
             </div>
         </form>
     </div>

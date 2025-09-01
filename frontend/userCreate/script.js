@@ -25,7 +25,11 @@ function cadastroUsuario(event) {
 
         .then(response => response.json())
 
-        .then(dados => console.log(dados))
+        .then(dados => {
+            console.log(dados)
+            alert("Usuário Cadastrado")
+            window.location.href = "../index.html"
+        })
 
         .catch(error => console.log(error));
 
