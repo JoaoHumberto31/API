@@ -26,11 +26,38 @@
                 <label for="senha" class="form-label">Senha</label>
                 <input type="password" class="form-control" id="senha" required>
             </div>
-            <div class="botoes">
-                <a href="../index.html" class="btn btn-outline-danger">Voltar</a>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <div class="mb-3">
+                <label for="cep" class="form-label">Cep</label>
+                <input type="text" class="form-control" id="cep" size="10" maxlength="9"
+                    onblur="pesquisaCep(this.value)"> <!--value=""-->
             </div>
-        </form>
+            <div class="mb-3">
+                <label for="rua" class="form-label">Rua</label>
+                <input type="text" class="form-control" id="rua" size="60">
+            </div>
+            <div class="mb-3">
+                <label for="bairro" class="form-label">Bairro</label>
+                <input type="text" class="form-control" id="bairro" size="40">
+            </div>
+            <div class="mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" size="40">
+            </div>
+            <div class="mb-3">
+                <label for="estado" class="form-label">Estado</label>
+                <input type="text" class="form-control" id="estado" size="2">
+            </div>
+            <div class="mb-3">
+                <label for="ibge" class="form-label">IBGE</label>
+                <input type="number" class="form-control" id="ibge" size="8">
+            </div>
+
+    </div>
+    <div class="botoes">
+        <a href="../index.html" class="btn btn-outline-danger">Voltar</a>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+    </form>
     </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

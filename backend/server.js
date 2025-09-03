@@ -10,8 +10,8 @@ app.use(cors());
 
 
 const usuarios = [
-    { "id": 1, "nome": "Otavio", "idade": 20, "senha": "123" },
-    { "id": 2, "nome": "Admin", "idade": 20, "senha": "1234" }
+    { "id": 1, "nome": "Otavio", "idade": 20, "senha": "123", "cep": "01311-000", "rua": "Avenida Paulista", "bairro": "Bela Vista", "cidade": "São Paulo", "estado": "SP", "ibge": "3550308"},
+    { "id": 2, "nome": "Admin", "idade": 20, "senha": "1234", "cep": "20031-142", "rua": "Rua México", "bairro": "Centro", "cidade": "Rio de Janeiro", "estado": "RJ", "ibge": "3304557"}
 ]
 
 let nextId = 3;
