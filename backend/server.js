@@ -73,9 +73,6 @@ app.delete("/usuarios/:id", (req, res) => {
     const index = usuarios.findIndex(usuario => usuario.id == id);
 
     if (index != null) {
-
-
-        
         usuarios.splice(index, 1);
         res.status(204).send("Usuário com id:" + id + " removido com sucesso!")
     } else {
